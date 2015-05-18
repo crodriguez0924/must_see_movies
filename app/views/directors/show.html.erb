@@ -4,7 +4,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Director #<%= @director.id %></h3>
+        <h3 class="panel-title">Director #<%=  %></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -39,6 +39,13 @@
           </div>
         </div>
       </div>
+
+      <ul class="list-group">
+        <% @director.movies.each do |movie| %>
+          <li class="list-group-item"><%= movie.title %></li>
+        <% end %>
+      </ul>
+
     </div>
   </div>
 </div>

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+
+  # get "/", :controller => "movies", :action => "index"
+  root "movies#index"
+
   # Routes for the Director resource:
   # CREATE
   get "/directors/new", :controller => "directors", :action => "new"
+  # get "/directors/new" => "directors#new"
   post "/create_director", :controller => "directors", :action => "create"
 
   # READ
